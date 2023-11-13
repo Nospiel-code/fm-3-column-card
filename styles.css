@@ -1,0 +1,184 @@
+:root {
+    --clr-primary-orange: hsl(31, 77%, 52%);
+    --clr-primary-cyan: hsl(184, 100%, 22%);
+    --clr-primary-dark-cyan: hsl(179, 100%, 13%);
+
+    --clr-secondary-400: hsl(0, 0%, 95%);
+    --clr-secondary-100: hsla(0, 0%, 100%, 0.75);
+
+    --ff-paragraph: 'Lexend Deca', sans-serif;
+    --ff-heading: 'Big Shoulders Display', sans-serif;
+}
+
+/* CSS RESET*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    line-height: 1;
+}
+
+/* GENERAL STYLING */
+
+body {
+    font-size: .9rem;
+    background-color: var(--clr-secondary-400);
+    font-family: var(--ff-paragraph);
+    font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 1rem;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+/* UTILITIES */
+
+.btn {
+    border: 2px solid transparent;
+    background-color: var(--clr-secondary-400);
+    border-radius: 1.5rem;
+    padding: .5rem 0;
+    width: 60%;
+}
+
+.one {
+    color: var(--clr-primary-orange);
+}
+
+.two {
+    color: var(--clr-primary-cyan);
+}
+
+.three {
+    color: var(--clr-primary-dark-cyan);
+}
+
+.btn:is(:hover, :focus) {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: --clr-neutral-400;
+    color: var(--clr-secondary-400);
+}
+
+/* FONT STYLES */
+
+.heading {
+    font-family: var(--ff-heading);
+    color: var(--clr-secondary-400);
+    font-weight: 700;
+    font-size: 2.275rem;
+}
+
+.text {
+    color: var(--clr-secondary-100);
+}
+
+/* CONTAINER STYLES */
+
+.container {
+    display: grid;
+    border-radius: .5rem;
+    overflow: hidden;
+    max-width: 450px;
+}
+
+.sub-container {
+    padding: 2.75rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+@media (min-width: 800px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 900px;
+    }
+
+    .text {
+        padding-bottom: 3rem;
+    }
+}
+
+.sedans {
+    background-color: var(--clr-primary-orange);
+}
+
+.suvs {
+    background-color: var(--clr-primary-cyan);
+}
+
+.luxury {
+    background-color: var(--clr-primary-dark-cyan);
+}
